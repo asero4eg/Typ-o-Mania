@@ -1,0 +1,174 @@
+* {
+  padding: 0;
+  margin: 0;
+  user-select: none;
+}
+@keyframes active {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-1px, 1px);
+  }
+  40% {
+    transform: translate(-1px, -1px);
+  }
+  60% {
+    transform: translate(1px, 1px);
+  }
+  80% {
+    transform: translate(1px, -1px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+:root {
+  --key-gap: 5px;
+}
+.red {
+  background-color: #ffa0a0;
+}
+.yellow {
+  background-color: #ffe1a0;
+}
+.green {
+  background-color: #abffa0;
+}
+.purple {
+  background-color: #f291ff;
+}
+.blue {
+  background-color: #91a7ff;
+}
+
+
+.container,
+.stats {
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+.container {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  background-color: #4d4d4d;
+  gap: 20px 0;
+}
+.stats {
+  flex-direction: column;
+  gap: 20px 0;
+  font-size: 1.8rem;
+  font-family: "Courier New", Courier, monospace;
+}
+.mode {
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.easy-active {
+  background-color: green;
+}
+.hard-active {
+  background-color: red;
+}
+.elem {
+  color: white;
+  line-height: 1.8rem;
+  width: 350px;
+}
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--key-gap);
+  z-index: 1;
+}
+.row {
+  display: flex;
+  gap: var(--key-gap);
+}
+.key,
+.fake-key {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 50px;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.3rem;
+}
+.active {
+  background-color: #fff;
+  box-shadow: 0px 0px 0px 2px #d58a00;
+  animation: active 0.3s infinite ease;
+}
+.tab {
+  width: 65px;
+}
+.caps {
+  width: 85px;
+}
+.shift {
+  width: 110px;
+}
+.space {
+  width: 500px;
+}
+.enter {
+  height: 104px;
+}
+.ctrl,
+.alt {
+  width: 65px;
+}
+.hand {
+  position: absolute;
+  top: 50%;
+  z-index: 0;
+}
+.left-hand {
+  left: 0;
+  transform: translateY(-50%);
+}
+.right-hand {
+  right: -10px;
+  transform: translateY(-50%) scaleX(-1);
+}
+.hand-wrapper {
+  position: relative;
+}
+.hand-wrapper svg {
+  fill: rgb(118, 118, 118);
+}
+.point {
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  transition: background-color 0.5s;
+}
+.thumb {
+  top: 265px;
+  left: 525px;
+}
+.index-finger {
+  top: 25px;
+  left: 415px;
+}
+.middle-finger {
+  top: 0px;
+  left: 322px;
+}
+.ring-finger {
+  top: 25px;
+  left: 235px;
+}
+.pinkie {
+  top: 135px;
+  left: 150px;
+}
